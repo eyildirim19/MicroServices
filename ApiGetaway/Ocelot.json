@@ -1,0 +1,31 @@
+{
+    "Routes": [
+      {
+        "DownstreamPathTemplate": "/WeatherForecast",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 56609
+          }
+        ],
+        "UpstreamPathTemplate": "/api/havadurumutahmini",
+        "UpstreamHttpMethod": [ "Get" ]
+      },
+      {
+        "DownstreamPathTemplate": "/api/values",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 19219
+          }
+        ],
+        "UpstreamPathTemplate": "/api/canimogrencilerim",
+        "UpstreamHttpMethod": [ "Get" ]
+      }
+    ]
+    //,"GlobalConfiguration": {
+    //  "BaseUrl": "https://localhost:5000"
+    //}
+  }
